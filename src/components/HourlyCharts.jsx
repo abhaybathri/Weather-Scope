@@ -71,10 +71,8 @@ function HourlyCharts({ hourlyWeather, hourlyAir }) {
           </button>
         )}
       </div>
-      <div className="w-full overflow-x-auto">
-        <div className="min-w-[500px] h-[260px]">
-          {children}
-        </div>
+      <div className="w-full h-[260px] touch-none">
+        {children}
       </div>
     </div>
   )
@@ -82,7 +80,7 @@ function HourlyCharts({ hourlyWeather, hourlyAir }) {
   const UnavailableCard = ({ title }) => (
     <div className="bg-black/30 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-4 md:p-5 w-full overflow-hidden">
       <h3 className="text-white font-semibold text-sm mb-4">{title}</h3>
-      <div className="min-h-[260px] flex items-center justify-center">
+      <div className="h-[260px] flex items-center justify-center">
         <p className="text-white/30 text-sm">Not available for past dates</p>
       </div>
     </div>

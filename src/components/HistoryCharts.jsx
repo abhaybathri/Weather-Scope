@@ -53,10 +53,8 @@ const getOptions = (yAxisLabel, tooltipCallbacks = {}) => ({
 const ChartWrapper = ({ title, children }) => (
   <div className="bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl p-4 md:p-5 w-full overflow-hidden">
     <h3 className="text-white font-semibold mb-4 text-sm">{title}</h3>
-    <div className="w-full overflow-x-auto">
-      <div className="min-w-[500px] h-[280px]">
-        {children}
-      </div>
+    <div className="w-full h-[280px] touch-none">
+      {children}
     </div>
   </div>
 )
